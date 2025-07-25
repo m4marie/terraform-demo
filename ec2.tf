@@ -13,6 +13,6 @@ resource "aws_instance" "example" {
   }
 }
  
-# Output the public IPs of the instances
-output "instance_public_ips"
+output "instance_public_ips" {
+  value = aws_instance.example.public_ip
 }
